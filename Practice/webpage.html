@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .form-container {
+        background-color: blanchedalmond;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0px;
+      }
+      .form {
+        border: 1px solid black;
+        width: 300px;
+        border-radius: 5px;
+      }
+      h2 {
+        text-align: center;
+      }
+      .form label {
+        display: block;
+        margin: 5px;
+        font-weight: bold;
+      }
+      input {
+        width: 90%;
+        margin: 10px;
+        border: 1px solid grey;
+        border-radius: 4px;
+        padding: 5px;
+      }
+      button {
+        margin: 10px;
+        padding: 4px;
+        width: 94%;
+        background-color: cadetblue;
+        border: 1px solid grey;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: blueviolet;
+      }
+      ul {
+        list-style-type: none;
+        padding: 5px;
+        margin: 0px;
+        overflow: hidden;
+        background-color: yellowgreen;
+      }
+      li {
+        float: left;
+      }
+      li a {
+        text-decoration: none;
+        padding: 5px;
+        margin: 7px;
+        color: green;
+        background-color: hsl(106, 86%, 47%);
+      }
+      li a:hover {
+        background-color: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li><a href="Home">Home</a></li>
+        <li><a href="Contact">Contact</a></li>
+        <li><a href="Profile">Profile</a></li>
+      </ul>
+    </div>
+    <div class="form-container">
+      <form class="form">
+        <h2>Create Account</h2>
+        <label for="name">Name :</label>
+        <input type="text" id="name" placeholder="Enter Name" />
+        <label for="email">Email :</label>
+        <input type="email" id="email" placeholder="Enter Email" />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

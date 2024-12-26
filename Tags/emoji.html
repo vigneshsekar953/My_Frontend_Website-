@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Rating</title>
+    <style>
+      .stars {
+        display: flex;
+        font-size: 50px;
+        cursor: pointer;
+      }
+
+      .star {
+        color: gray; /* Initial color of the star */
+        transition: color 0.3s ease;
+      }
+
+      /* Change star color when selected */
+      .star.selected {
+        color: gold; /* Yellow filled star when selected */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Rate with Stars</h1>
+
+    <!-- 5 Stars for rating (empty stars initially) -->
+    <div class="stars">
+      <span class="star" id="star1">☆</span>
+      <!-- Empty star -->
+      <span class="star" id="star2">☆</span>
+      <!-- Empty star -->
+      <span class="star" id="star3">☆</span>
+      <!-- Empty star -->
+      <span class="star" id="star4">☆</span>
+      <!-- Empty star -->
+      <span class="star" id="star5">☆</span>
+      <!-- Empty star -->
+    </div>
+
+    <!-- Submit Button -->
+    <span><button onclick="alertfun()">Submit</button></span>
+  </body>
+</html>

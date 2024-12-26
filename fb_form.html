@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback form</title>
+    <link rel="icon" href="images/logo1.png" type="image/png" />
+    <head>
+      <script src="script.js"></script>
+      <script src="script2.js"></script>
+      <script src="script3.js"></script>
+      
+    </head>
+    <style>
+      #head1 {
+        color: rgb(194, 246, 141);
+      }
+      .topnav{
+          color: rgb(226, 19, 60);
+          background-color: rgb(253, 146, 167);
+          text-align: right;
+          white-space: nowrap;
+      }
+      table,
+      th,
+      td {
+        border: 2px solid blue;
+        padding:7px;
+        border-collapse: collapse;
+        border-radius: 7px;
+        background-color: rgb(251, 247, 164);
+      }
+      body {
+        background-image: url("images/bg_image.png");
+        background-size: cover; /* Makes the image cover the entire page */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat;
+      }
+      a,
+      input {
+        text-decoration: none;
+        border: none;
+        color: blanchedalmond;
+      }
+      label {
+        color: crimson;
+      }
+      input {
+        color: blue;
+        background-color: rgb(251, 247, 164);;
+      }
+      .stars {
+        display: flex;
+        font-size: 50px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .star {
+        color: gray; /* Initial color of the star */
+        transition: color 0.3s ease;
+      }
+
+      /* Change star color when selected */
+      .star.selected {
+        color: rgb(59, 243, 212); /* Yellow filled star when selected */
+      }
+    </style>
+
+    <div id="footer"></div>
+  </head>
+  <color></color>
+  <!-- Semantic elements
+    1. main
+    2. section
+    3. header
+    4. footer
+    5. nav
+    6. article) -->
+  <body>
+    <!-- <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      
+      ctx.beginPath();
+      ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+      ctx.stroke();
+      </script>y
+    <script>
+      function togglePassword() {
+        const passwordInput = document.getElementById("password");
+        const button = event.target; // Get the button element
+  
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text"; // Show the password
+          button.textContent = "Hide"; // Change button text
+        } else {
+          passwordInput.type = "password"; // Hide the password
+          button.textContent = "Show"; // Change button text back
+        }
+      }
+    </script> -->
+    <header>
+      
+      <div class="topnav"
+      >
+        <a class="active" href="links/links/home.html"
+          ><h3 style="display: inline; margin: 0 10px">Home</h3></a
+        >
+        <a href="includes/footer.html"
+          ><h3 style="display: inline; margin: 0 10px">Contact</h3></a
+        >
+        <a href="includes/footer.html"
+          ><h3 style="display: inline; margin: 0 10px">About us</h3></a
+        >
+        <a href="links/links/aboutus.html"
+          ><h3 style="display: inline; margin: 0 10px">Profile</h3></a
+        >
+      </div>
+     
+      <center>
+        <h1 id="head1">
+          
+          <img
+            src="images/logo1.png"
+            alt="Logo"
+            style="width: 50px; height: 40px; background-color: antiquewhite"
+          />
+          Feedback Form
+        </h1>
+      </center>
+    </header>
+    <center>
+      <main>
+        <form id="form1">
+          <input type="text" style="display:none;" autocomplete="off" />
+  
+          <table class="table_form" >
+            <tr>
+              <td><label for="fullname">Full Name </label></td>
+              <td>
+                <input
+                  type="text"
+                  id="fullname"
+                  placeholder="Enter Your Full Name"
+                  required
+                />
+              </td>
+            </tr>
+            
+            <tr>
+              <td>
+                <label for="email">Email </label>
+              </td>
+              <td>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  pattern="[a-zA-Z0-9]+@gmail\.com"
+                  placeholder="Demo@gmail.com"
+                  autocomplete="new-password"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="userIP">User Name</label></td>
+              <td>
+                <input
+                type="text"
+                id="userIP"
+                name="user"
+                placeholder="Enter UserName"
+                pattern="(?=.*[a-zA-Z])(?=.*[!@#$%^&*_]){5}"
+                autocomplete="new-password"
+                required
+              />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="password" name="password">Password </label></td>
+              <td>
+                <input
+                  type="password"
+                  id="password"
+                  required
+                  pattern="(?=.*[A-Z])(?=.*(a-z)(?=.*[0-9])(?=.*[!@#$%^&*_]).{8,})"
+                  placeholder="Enter Password"
+                  autocomplete="new-password"
+                
+                />
+                <button type="button" onclick="togglePassword()">Show</button>
+              </td>
+             
+            </tr>
+            <tr>
+              <td><label for="phone">Phone Number </label></td>
+              <td><input type="number" id="phone" pattern="[0-9]{10}" /></td>
+            </tr>
+            <tr>
+              <td><label for="date">Date Of Birth </label></td>
+              <td><input type="date" placeholder="Enter Your Birth Date" /></td>
+            </tr>
+            <tr>
+              <td><label for="feedback">Feedback </label></td>
+              <td>
+                <textarea
+                  id="feedback"
+                  placeholder="Enter Your Feedback"
+                ></textarea>
+              </td>
+              <tr>
+                <td><label >Upload Your File</label></td>
+                <td><input type="file" id="myFile" name="filename"></td>
+                
+              </tr>
+            </tr>
+          </table>
+        
+             <br>
+        <button type="submit">Submit</button>
+      
+        </form>
+
+        <br />
+        <br />
+
+        <!-- 5 Stars for rating (empty stars initially) -->
+        <div class="stars">
+          <span class="star" id="star1">☆</span>
+          <!-- Empty star -->
+          <span class="star" id="star2">☆</span>
+          <!-- Empty star -->
+          <span class="star" id="star3">☆</span>
+          <!-- Empty star -->
+          <span class="star" id="star4">☆</span>
+          <!-- Empty star -->
+          <span class="star" id="star5">☆</span>
+          <!-- Empty star -->
+        </div>
+
+        <br />
+        
+      </main>
+    </center>
+    <br /><br />
+    <footer
+      class="text-center text-lg-start bg-dark text-white"
+      style="
+        font-family: 'Times New Roman', Times, serif;
+        background-color: black;
+        color: white;
+      "
+    >
+      <!-- Section for social media links -->
+      <section>
+        <div class="container p-4">
+          <div class="d-flex justify-content-center">
+            <a href="" class="me-4 text-reset"
+              ><i class="fa fa-facebook"></i
+            >
+          </a>
+            <a href="" class="me-4 text-reset"><i class="fa fa-twitter"></i></a>
+            <a href="" class="me-4 text-reset"><i class="fa fa-google"></i></a>
+            <a href="" class="me-4 text-reset"
+              ><i class="fa fa-instagram"></i
+            ></a>
+            <a href="" class="me-4 text-reset"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+            <a href="" class="me-4 text-reset"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer content with 4 columns -->
+      <section>
+        <div class="container text-center text-md-start mt-5">
+          <div class="row">
+            <!-- Column 1: Blog Description -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fa fa-cart-plus"></i> BLOG Website
+              </h6>
+              <p>
+                blogsite.com is a one-stop destination for society and fashion
+                needs. We give you the opportunity to give your wardrobe a
+                makeover with the latest posts from our website. Stay updated on
+                the latest trends and news in the world of fashion!
+              </p>
+            </div>
+
+            <!-- Column 2: Get Involved -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Get Involved</h6>
+              <p><a href="#!" class="text-reset">Write for us</a></p>
+              <p><a href="#!" class="text-reset">Advertise with us</a></p>
+              <p><a href="#!" class="text-reset">Become a Contributor</a></p>
+              <p>
+                <a href="#!" class="text-reset">Join our Affiliate Program</a>
+              </p>
+            </div>
+
+            <!-- Column 3: Useful Links -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Useful Links</h6>
+              <p><a href="#!" class="text-reset">FAQ</a></p>
+              <p><a href="#!" class="text-reset">Feedback</a></p>
+              <p><a href="#!" class="text-reset">About Us</a></p>
+              <p><a href="#!" class="text-reset">Contact Us</a></p>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fa fa-home"></i> Vignesh S</p>
+              <p><i class="fa fa-envelope"></i> feedback@example.com</p>
+              <p><i class="fa fa-phone"></i> + 91 9384420986</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Copyright -->
+      <div class="text-center p-4">
+        &copy; 2021 Copyright
+        <a class="text-reset fw-bold" href="https://vignesh.in/">vignesh.in</a>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<!-- input type=submit onclick=alert() -->
+<!-- &#x1F614;
+  &#x1F604;
+  &#x1F929;
+  😭 &#x1F62D; 😂 &#x1F602; -->
+<!-- 
+  <p>
+    An image as a link: <a href="https://www.w3schools.com">
+    <img border="0" alt="W3Schools" src="logo_w3s.gif" width="100" height="100">
+    </a>
+    </p> -->

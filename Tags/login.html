@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link rel="icon" href="images/logo1.png" type="image/png" />
+  </head>
+  <body background="images/bg_image.png">
+    <style>
+      th, td {
+  padding: 15px;
+  }
+  input{
+    background-color: aliceblue;
+    
+  }
+
+      a {
+        text-decoration: none;
+      }
+      .table1 {
+        color: blanchedalmond;
+        border:none;
+        border-collapse: collapse;
+      }
+      /* .topnav {
+        display: inline;
+        margin: 0px 10px;
+        background-color: antiquewhite;
+      } */
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        /* background-color: rgb(42, 82, 157); */
+        color: white;
+        text-align: center;
+      }
+    </style>
+    <header>
+      <div
+        class="topnav"
+        style="
+          color: rgb(226, 19, 60);
+          background-color: rgb(253, 146, 167);
+          text-align: left;
+          white-space: nowrap;
+        "
+      >
+        <a class="active" href="links/links/home.html"
+          ><h3 style="display: inline; margin: 0 10px">Home</h3></a
+        >
+        <a href=""><h3 style="display: inline; margin: 0 10px">Contact</h3></a>
+        <a href=""><h3 style="display: inline; margin: 0 10px">About us</h3></a>
+        <a href=""><h3 style="display: inline; margin: 0 10px">Profile</h3></a>
+      </div>
+    </header>
+    <center>
+      <main>
+        <form action="submitpage.html" method="get">
+          <table border="2px solid red" class="table1">
+            <caption>
+              Registration Form
+            </caption>
+            <br />
+            <tr>
+              <td><label for="name">Name</label></td>
+              <td>
+                <input type="text" id="name" placeholder="Enter Your Name" />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="user">User Name</label></td>
+              <td>
+                <input
+                  type="user"
+                  id="user"
+                  placeholder="Enter User Name "
+                  pattern="(?=.*[a-zA-Z0-9])(?=.*[!@#$%^&*]){5,}"
+                  required
+                  autocomplete="new-password"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="mail">Email</label></td>
+              <td>
+                <input
+                  type="email"
+                  id="mail"
+                  placeholder="demo@gmail.com"
+                  pattern="(?=.*[a-z0-9])+@gmail.\com"
+                  required
+                  autocomplete="new-password"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="pass">Password</label></td>
+              <td>
+                <input
+                  type="password"
+                  id="pass"
+                  placeholder="Enter Password"
+                  pattern="[a-zA-Z0-9]{8,}"
+                  required
+                  autocomplete="new-password"
+                />
+              </td>
+            </tr>
+          </table>
+          <br />
+          <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+        <label for="subscribe">Subscribe to our newsletter</label>
+        <br><br>
+          <button type="submit">
+            Submit    </button>
+        </form>
+      </main>
+    </center>
+    <center>
+      <footer class="footer">Thanks for Visit
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+            <p><i class="fa fa-envelope"></i> Login@example.com</p>
+            <p><i class="fa fa-phone"></i> + 91 9384420986</p>
+          </div>
+        </div>
+      </footer>
+    </center>
+  </body>
+</html>
+
+<!-- 
+<div
+    class="topnav"
+    style="
+      color: rgb(226, 19, 60);
+      background-color: rgb(253, 146, 167);
+      text-align: right;
+      white-space: nowrap;
+      margin:5px 10px;
+    
+    "
+  >
+-->

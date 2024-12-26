@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form </title>
+    <style>
+      #formbox {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0px;
+        /* background-color: #a19797; */
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0px;
+        padding: 5px;
+        overflow: hidden;
+        background-color: #333333;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        color: rgb(98, 250, 144);
+        /* text-align: right; */
+        padding: 10px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        /* cursor: pointer; */
+        background-color: black;
+      }
+      .form-container {
+        border: 3px solid green; /* Blue border */
+        padding: 20px;
+        border-radius: 20px; /* Rounded corners */
+        width: 300px;
+        font-family: 'Times New Roman';
+        background-color: white; /* Background color for the form */
+        box-shadow: 5px 5px 0px rgba(41, 121, 45, 0.925);
+      }
+      .form-container h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .form-container label {
+        display: block;
+        margin-bottom: 7px;
+        font-weight: bold;
+      }
+      .form-container input {
+        width: 100%;
+        padding: 7px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        
+      }
+      
+      .form-container button {
+        width: 100%;
+        padding: 10px;
+        background-color: #0b990b;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .form-container button:hover {
+        background-color: blue;
+      }
+      .footer{
+        background-color: #26af26;
+
+      }
+    </style>
+  </head>
+
+  <body >
+    <div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About us</a></li>
+      </ul>
+    </div>
+    <div id="formbox" style="background-color: 
+    rgb(174, 255, 127);">
+      <form class="form-container" action="submitPage.html" method="post">
+        <h2>Create Account</h2>
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Enter your username"
+          pattern="^[a-zA-Z!@#$%^&*_]+"
+          required
+        />
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          pattern="^[A-Z]{1}[a-z0-9]+"
+          required
+        />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          pattern="^[a-z0-9]+@gmail\.com"
+          placeholder="Enter Your Email"
+          required
+        />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+  <center>
+    <footer class="footer">Thanks for Visit
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <p><i class="fa fa-envelope"></i> Login@example.com</p>
+          <p><i class="fa fa-phone"></i> + 91 9384420986</p>
+        </div>
+      </div>
+    </footer>
+  </center>
+</html>

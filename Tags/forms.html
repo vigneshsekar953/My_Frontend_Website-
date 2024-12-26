@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/Submit" method="post">
+      <label for="name">Name :</label>
+      <input type="text" id="name" name="name" />
+      <br />
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" />
+      <br />
+      <label for="pass">Password :</label>
+      <input type="password" placeholder="password" id="pass" name="password" />
+      <br />
+      <label for="course">Courses:</label>
+      <input
+        type="checkbox"
+        id="fullstack"
+        name="course"
+        value="Full Stack"
+        checked
+      />
+      <label for="fullstack">Full Stack</label>
+      <input type="checkbox" id="ai" name="course" value="AI" />
+      <label for="ai">AI</label>
+      <input
+        type="checkbox"
+        id="datascience"
+        name="course"
+        value="Data Science"
+        checked
+      />
+      <label for="datascience">Data Science</label>
+      <br />
+      <label for="Transaction">Transaction :</label>
+      <input type="radio" id="Transaction" name="Transaction" />Paytm
+      <input type="radio" id="Transaction" name="Transaction" />Gpay
+      <br />
+      <label for="submit">Submit</label>
+      <input type="submit" id="submit" name="submit" />
+    </form>
+  </body>
+</html>
